@@ -13,13 +13,13 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if 'placeholder' in post.featured_image.url %}
+                                {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="">
+                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                                 {% else %}
-                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
-                                <div class="image-flasg">
+                                <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
@@ -38,6 +38,7 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
+
             </div>
         </div>
     </div>
@@ -54,7 +55,5 @@
         </ul>
     </nav>
     {% endif %}
-
 </div>
-
 {%endblock%}
